@@ -24,17 +24,18 @@ class AppRouter {
 
   AppRouter._internal() {
     final routes = <RouteBase>[
-          GoRoute(
-            path: AppConstants.onBoarding,
-            builder: (_, state) => OnBoardingPage(),
-          ),
-        ],
-        route = GoRouter(
-          initialLocation: AppConstants.splash,
-          routes: routes,
-          errorBuilder: (context, state) {
-            return Scaffold(body: "".s(18));
-          },
-        );
+      GoRoute(
+        path: AppConstants.onBoarding,
+        builder: (_, state) => OnBoardingPage(),
+      ),
+    ];
+
+    route = GoRouter(
+      initialLocation: AppConstants.splash,
+      routes: routes,
+      errorBuilder: (context, state) {
+        return Scaffold(body: "".s(18));
+      },
+    );
   }
 }

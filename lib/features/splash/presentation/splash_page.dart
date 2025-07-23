@@ -16,7 +16,10 @@ class _SplashPageState extends State<SplashPage> {
   _nextPage(BuildContext context) async {
     await Future.delayed(Duration(seconds: 3), () {
       if (context.mounted) {
-        context.go(AppConstants.onBoarding);
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => OnBoardingPage()),
+        );
       }
     });
   }
