@@ -35,7 +35,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           height: appH(320), width: appW(320)),
       SvgPicture.asset('assets/icons/on_boarding_two.svg',
           height: appH(320), width: appW(320)),
-      SvgPicture.asset('assets/icons/on_boarding_three.svg',
+      SvgPicture.asset('assets/icons/on_boarding_third.svg',
           height: appH(320), width: appW(320)),
     ];
 
@@ -44,7 +44,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         padding: scaffoldPadding16,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          spacing: appH(40),
+          spacing: appH(80),
           children: [
             Expanded(
               child: PageView.builder(

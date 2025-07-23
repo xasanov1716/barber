@@ -23,6 +23,10 @@ class BoardingWidget extends StatelessWidget {
           image,
           Text(text,
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 34,
+                fontWeight: FontWeight.bold
+              ),
              )
         ],
       ),
