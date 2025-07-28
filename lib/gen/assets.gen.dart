@@ -42,11 +42,15 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/login_image.png
+  AssetGenImage get loginImage =>
+      const AssetGenImage('assets/images/login_image.png');
+
   /// File path: assets/images/welcome.png
   AssetGenImage get welcome => const AssetGenImage('assets/images/welcome.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [welcome];
+  List<AssetGenImage> get values => [loginImage, welcome];
 }
 
 class Assets {

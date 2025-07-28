@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors{
   static const Color cFEA429 =  Color(0xffFEA429);
   static const Color cFC9401 =  Color(0xffFC9401);
+  static const Color white =  Color(0xffFFFFFF);
   static const greyScale = _GreyScale();
 
 
@@ -21,5 +22,4 @@ class _GreyScale {
   final Color grey200 = const Color(0xFFEEEEEE);
   final Color grey100 = const Color(0xFFF5F5F5);
   final Color grey50 = const Color(0xFFFAFAFA);
-
 }

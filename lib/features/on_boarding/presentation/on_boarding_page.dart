@@ -1,8 +1,8 @@
 import 'package:barber/core/common/default_button_wg.dart';
 import 'package:barber/core/common/sizes.dart';
 import 'package:barber/core/common/strings/app_strings.dart';
+import 'package:barber/features/auth/login/presentation/login_page.dart';
 import 'package:barber/features/on_boarding/presentation/widgets/boarding_widget.dart';
-import 'package:barber/features/splash/presentation/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -81,7 +81,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 } else {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (_) => const SplashPage()),
+                    MaterialPageRoute(builder: (_) => const LoginPage()),
                   );
                 }
               },
