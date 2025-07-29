@@ -18,7 +18,7 @@ extension TextStringExtensions on String {
 
 extension TextStyleExtensions on TextStyle {
   TextStyle copyWith({
-    bool? inherit,
+    bool? inherit,  
     Color? color,
     Color? backgroundColor,
     double? fontSize,
