@@ -1,4 +1,5 @@
 import 'package:barber/core/common/sizes.dart';
+import 'package:barber/core/extension/text_extension.dart';
 import 'package:flutter/material.dart';
 import '../../../core/common/strings/app_strings.dart';
 import '../../../core/utils/app_colors.dart';
@@ -17,18 +18,7 @@ void showLogoutModal(BuildContext context) {
         mainAxisSize: MainAxisSize.min,
         spacing: appH(20),
         children: [
-          Text(
-            'log out',
-            // style: AppTextStyles.urbanist.bold(
-            //   color: AppColors.red,
-            //   fontSize: 24,
-            // ),
-
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 24
-            ),
-          ),
+          AppStrings.logOut.s(25).w(600).c(Colors.red),
           Divider(thickness: 1, color: AppColors.greyScale.grey200),
           Text(
             AppStrings.wantToLogOut,
@@ -50,21 +40,13 @@ void showLogoutModal(BuildContext context) {
                   child: FilledButton(
                     onPressed: () => Navigator.pop(context),
                     style: TextButton.styleFrom(
-                      // backgroundColor: AppColors.blue100,
+                backgroundColor: AppColors.yellow,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
-                    child: Text(
-                      AppStrings.cancel,
-                      // style: AppTextStyles.urbanist.bold(
-                      //   color: AppColors.primary(),
-                      //   fontSize: 16,
-                      // ),
-                      style: TextStyle(
-                        fontSize: 16
-                      ),
-                    ),
+                    child:
+                      AppStrings.cancel.s(16).w(600).c(AppColors.cFC9401),
                   ),
                 ),
               ),
@@ -82,17 +64,8 @@ void showLogoutModal(BuildContext context) {
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
-                    child: Text(
-                      AppStrings.yesLogOut,
-                      // style: AppTextStyles.urbanist.bold(
-                      //   color: AppColors.white,
-                      //   fontSize: 16,
-                      // ),
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16
-                      ),
-                    ),
+                    child:
+                      AppStrings.yesLogOut.s(16).c(AppColors.white),
                   ),
                 ),
               ),

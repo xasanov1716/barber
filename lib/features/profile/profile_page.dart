@@ -35,7 +35,7 @@ class ProfilePage extends StatelessWidget {
                 onEdit: () {},
                 name: "Elon Musk",
                 gmail: "elon@gmail.com",
-                image: "",
+                image: "assets/images/profile.png",
               ),
               Divider(height: 1, color: AppColors.greyScale.grey200),
               ProfileSettingRowWg(
@@ -101,7 +101,9 @@ class ProfilePage extends StatelessWidget {
               ProfileSettingRowWg(
                 icon: IconlyLight.user_1,
                 title: AppStrings.inviteFriends,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteNames.profileInviteFriends);
+                },
               ),
               InkWell(
                 onTap: () => showLogoutModal(context),

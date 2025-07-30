@@ -27,7 +27,7 @@ class _ProfileInviteFriendsPageState extends State<ProfileInviteFriendsPage> {
       backgroundColor: AppColors.white,
       appBar: ActionAppBarWg(
         onBackPressed: () {
-          context.pop();
+          Navigator.pop(context);
         },
         titleText: AppStrings.inviteFriends,
       ),
@@ -36,7 +36,7 @@ class _ProfileInviteFriendsPageState extends State<ProfileInviteFriendsPage> {
         child: ListView.builder(
           itemCount: 12,
           itemBuilder: (context, index) => BaseContactCardWg(
-            imagePath: "",
+            imagePath: "assets/images/profile.png",
             name: "Elon Musk",
             subtitle: "+998 90 180 20 40",
             trailing: GestureDetector(

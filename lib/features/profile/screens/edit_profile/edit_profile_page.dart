@@ -66,7 +66,7 @@ class EditProfilePage extends StatelessWidget {
                 _blankContainer(
                   Row(
                     children: [
-                      Image.asset(""),
+                      Image.asset("assets/images/usa.png"),
                       IconButton(
                         onPressed: () {},
                         icon: Icon(Icons.keyboard_arrow_down, size: appH(20)),
