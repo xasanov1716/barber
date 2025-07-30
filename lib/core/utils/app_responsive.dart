@@ -17,4 +17,7 @@ class AppResponsive {
   static double height(double number) => (number / 926) * screenHeight;
 
   static double width(double number) => (number / 428) * screenWidth;
+
+
+
 }
