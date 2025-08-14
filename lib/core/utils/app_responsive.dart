@@ -1,20 +1,20 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-double appH(double number) => AppResponsive.height(number);
+// double appH(double number) => AppResponsive.height(number);
 
-double appW(double number) => AppResponsive.width(number);
+// double appW(double number) => AppResponsive.width(number);
 
-class AppResponsive {
-  static late double screenHeight;
-  static late double screenWidth;
+// class AppResponsive {
+//   static late double screenHeight;
+//   static late double screenWidth;
 
-  static void init(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    screenHeight = size.height;
-    screenWidth = size.width;
-  }
+//   static void init(BuildContext context) {
+//     final size = MediaQuery.of(context).size;
+//     screenHeight = size.height;
+//     screenWidth = size.width;
+//   }
 
-  static double height(double number) => (number / 926) * screenHeight;
+//   static double height(double number) => (number / 926) * screenHeight;
 
-  static double width(double number) => (number / 428) * screenWidth;
-}
+//   static double width(double number) => (number / 428) * screenWidth;
+// }

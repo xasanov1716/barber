@@ -1,3 +1,4 @@
+import 'package:barber/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_responsive.dart';
@@ -15,10 +16,10 @@ class BoardingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: appH(60)),
+      padding: EdgeInsets.only(top: 60.appH(context)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        spacing: appH(60),
+        spacing: 60.appH(context),
         children: [
           image,
           Text(text,

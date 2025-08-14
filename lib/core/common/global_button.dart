@@ -1,38 +1,80 @@
-import 'package:barber/core/extension/text_extension.dart';
 import 'package:barber/core/utils/app_colors.dart';
 import 'package:barber/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class GlobalButton extends StatelessWidget {
   const GlobalButton({
     super.key,
+    this.color = Colors.blue,
     required this.title,
-    required this.icon,
-    required this.backgroundColor,
-    required this.borderColor,
-    required this.borderRadius,
+    this.radius = 16,
+    this.textColor = AppColors.black,
+    this.leftIcon,
+    this.rightIcon = "",
+    this.borderColor = Colors.transparent,
+    required this.onTap,
+    this.padding,
   });
 
+  final Color color;
+
+  final Color textColor;
   final String title;
-  final SvgGenImage icon;
-  final Color backgroundColor;
+  final double radius;
+  final String rightIcon;
+  final SvgGenImage? leftIcon;
   final Color borderColor;
-  final double borderRadius;
+  final VoidCallback onTap;
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(decoration: BoxDecoration(),child: 
-    Column(
-      children: [
-        Row(
-          children: [
-            icon.svg(),
-            12.horizontalSpace,
-            title.s(16.sp).w(500).c(AppColors.c000000)
-          ],
-        )
-      ],
-    ),);
+    return Padding(
+      padding: padding == null ? EdgeInsets.zero : padding!,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(radius),
+          border: Border.all(width: 1, color: borderColor),
+        ),
+        child: Material(
+          borderRadius: BorderRadius.circular(radius),
+          color: color,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(radius),
+            onTap: onTap,
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  leftIcon != null
+                      ? (leftIcon ?? Assets.icons.apple).svg()
+                      : const Text(""),
+                  SizedBox(width: 16.w),
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      title,
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w500,
+                        color: textColor,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(width: 16.w),
+                  rightIcon.isEmpty
+                      ? const Text("")
+                      : SvgPicture.asset(rightIcon),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
