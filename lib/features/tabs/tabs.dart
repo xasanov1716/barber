@@ -1,6 +1,7 @@
 import 'package:barber/core/extension/text_extension.dart';
 import 'package:barber/core/utils/app_colors.dart';
 import 'package:barber/features/home/presentation/home_page.dart';
+import 'package:barber/features/profile/profile_page.dart';
 import 'package:barber/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +19,7 @@ class _TabsState extends State<Tabs> {
     Scaffold(appBar: AppBar(), body: "Hello 1".s(17.sp)),
     Scaffold(appBar: AppBar(), body: "Hello 2".s(17.sp)),
     Scaffold(appBar: AppBar(), body: "Hello 3".s(17.sp)),
-    
+    ProfilePage()
   ];
 
   int _currentPage = 0;

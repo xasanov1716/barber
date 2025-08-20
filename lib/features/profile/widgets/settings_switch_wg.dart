@@ -1,4 +1,5 @@
 import 'package:barber/core/extension/text_extension.dart';
+import 'package:barber/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/app_colors.dart';
@@ -22,8 +23,8 @@ class SettingsSwitchWg extends StatelessWidget {
       children: [
           text.s(18).w(500).c(AppColors.greyScale.grey900),
         SizedBox(
-          height: appH(24),
-          width: appW(44),
+          height: 24.appH(context),
+          width: 44.appW(context),
           child: Switch.adaptive(
             activeColor: Colors.white,
             thumbColor: WidgetStateProperty.resolveWith((states) {

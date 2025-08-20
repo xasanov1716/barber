@@ -1,4 +1,6 @@
+import 'package:barber/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_responsive.dart';
 
@@ -19,14 +21,14 @@ class ProfileInfoWg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: appH(190),
+      height: 190.appH(context),
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CircleAvatar(
             backgroundImage: AssetImage(image ?? "no image"),
-            radius: appH(60),
+            radius: 60.h,
             child: Align(
               alignment: Alignment.bottomRight,
               child: GestureDetector(
@@ -34,7 +36,7 @@ class ProfileInfoWg extends StatelessWidget {
                 child: Icon(
                   Icons.edit,
                   color: AppColors.cFEA429,
-                  size: appH(30),
+                  size: 30.h,
                 ),
               ),
             ),

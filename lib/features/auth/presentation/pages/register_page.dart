@@ -102,8 +102,8 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  height: 56 * height / AppConstants.figmaHeight,
-                  width: 80 * width / AppConstants.figmaWidth,
+                  height: 56 * height / figmaHeight,
+                  width: 80 * width / figmaWidth,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16.r),
@@ -117,8 +117,8 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 56 * height / AppConstants.figmaHeight,
-                  width: 80 * width / AppConstants.figmaWidth,
+                  height: 56 * height / figmaHeight,
+                  width: 80 * width / figmaWidth,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16.r),
@@ -132,8 +132,8 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 56 * height / AppConstants.figmaHeight,
-                  width: 80 * width / AppConstants.figmaWidth,
+                  height: 56 * height / figmaHeight,
+                  width: 80 * width / figmaWidth,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16.r),

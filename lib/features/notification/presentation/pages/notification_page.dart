@@ -48,7 +48,7 @@ class NotificationPage extends StatelessWidget {
                     )
                   ],
                 ),
-              ),
+              ).paddingSymmetric(horizontal: 24),
             ),
           ],
         ).paddingSymmetric(horizontal: 24.w, vertical: 10.h),

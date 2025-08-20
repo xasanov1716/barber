@@ -27,8 +27,8 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Assets.images.loginImage.image(
-              height: 200 * height / AppConstants.figmaHeight,
-              width: 343 * width / AppConstants.figmaWidth,
+              height: 200 * height / figmaHeight,
+              width: 343 * width / figmaWidth,
             ),
             14.verticalSpace,
             "Let’s you in".s(46.sp).w(600),

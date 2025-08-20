@@ -315,3 +315,5 @@ class SvgGenImage {
 
   String get keyName => _assetName;
 }
+
+

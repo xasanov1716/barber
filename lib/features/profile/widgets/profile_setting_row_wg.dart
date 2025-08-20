@@ -1,9 +1,9 @@
 import 'package:barber/core/extension/text_extension.dart';
+import 'package:barber/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_responsive.dart';
-import '../../../core/utils/text_styles/text_style.dart';
 
 class ProfileSettingRowWg extends StatelessWidget {
   final IconData? icon;
@@ -25,17 +25,17 @@ class ProfileSettingRowWg extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
-          spacing: icon != null ? appW(20) : 0,
+          spacing: icon != null ? 20.appW(context) : 0,
           children: [
             icon != null
-                ? Icon(icon, size: appH(28), color: AppColors.greyScale.grey900)
+                ? Icon(icon, size: 28.h, color: AppColors.greyScale.grey900)
                 : SizedBox.shrink(),
               title.s(18).w(500).c(AppColors.black
             ),
           ],
         ),
         Row(
-          spacing: appW(20),
+          spacing: 20.appW(context),
           children: [
             Text(
               secondaryText ?? ""..s(18).w(500).c(AppColors.black),

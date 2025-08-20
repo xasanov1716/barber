@@ -1,3 +1,4 @@
+import 'package:barber/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/app_colors.dart';
@@ -12,9 +13,9 @@ class ProfileBlankContainerWg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerLeft,
-      padding: EdgeInsets.symmetric(horizontal: appW(20)),
+      padding: EdgeInsets.symmetric(horizontal: 20.appW(context)),
       width: double.infinity,
-      height: appH(56),
+      height: 56.appH(context),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: AppColors.greyScale.grey50,

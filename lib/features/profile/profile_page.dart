@@ -1,19 +1,24 @@
 import 'package:barber/core/extension/text_extension.dart';
+import 'package:barber/core/utils/extensions.dart';
 import 'package:barber/features/profile/widgets/logout_bottom_sheet_wg.dart';
 import 'package:barber/features/profile/widgets/profile_info_wg.dart';
 import 'package:barber/features/profile/widgets/profile_setting_row_wg.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconly/iconly.dart';
 
+import '../../core/common/app_bar/default_appbar_wg.dart';
 import '../../core/common/strings/app_strings.dart';
+import '../../core/router/route_names.dart';
 import '../../core/utils/app_colors.dart';
 import '../../core/utils/app_responsive.dart';
+import '../../core/utils/text_styles/text_style.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    AppResponsive.init(context);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: DefaultAppBarWg(
@@ -21,11 +26,11 @@ class ProfilePage extends StatelessWidget {
         onMorePressed: () {},
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: appW(24), vertical: appH(12)),
+        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: appH(20),
+            spacing: 20.appH(context),
             children: [
               ProfileInfoWg(
                 onEdit: () {},
@@ -74,11 +79,11 @@ class ProfilePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    spacing: appW(20),
+                    spacing: 20.appW(context),
                     children: [
                       Icon(
                         IconlyLight.show,
-                        size: appH(28),
+                        size: 28,
                         color: AppColors.greyScale.grey900,
                       ),
                      AppStrings.darkMode.s(18).w(500).c(AppColors.black)
@@ -104,11 +109,11 @@ class ProfilePage extends StatelessWidget {
               InkWell(
                 onTap: () => showLogoutModal(context),
                 child: Row(
-                  spacing: appW(20),
+                  spacing: 20.appW(context),
                   children: [
                     Icon(
                       IconlyLight.logout,
-                      size: appH(28),
+                      size: 28,
                       color: Colors.red,
                     ),
                   AppStrings.logOut.s(18).w(500).c(Colors.red),
