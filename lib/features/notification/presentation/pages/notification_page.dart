@@ -23,6 +23,7 @@ class NotificationPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             "Today".s(18.sp).w(600).c(AppColors.black),
             ...List.generate(
