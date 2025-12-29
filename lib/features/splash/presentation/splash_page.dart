@@ -1,6 +1,5 @@
 import 'package:barber/core/utils/app_colors.dart';
 import 'package:barber/core/utils/constants.dart';
-import 'package:barber/features/on_boarding/presentation/on_boarding_page.dart';  
 import 'package:barber/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
